@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>~</title>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<script src="scripts/transitions.js"></script>
+	</head>
+
+	<body>
+		<svg id="fader"></svg>
+        <script>fadeInPage();</script>
+
+		<!-- Welcome screen -->
+		<div id="main_window">
+			<img id=leftImg src="assets/img/solaire.jpg" class="image">
+			<div id="content">
+				<h1 class="title">Welcome Hank!</h1>
+				<div id="date">
+					<script type="text/javascript">
+						function doDate() {
+							var str = "";
+							var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+							var clock = new Date();
+							var now = new Date();
+
+							str += months[clock.getMonth()] + " " + now.getDate() + ", " + clock.getFullYear() + " | " + ("0" + now.getHours()).slice(-2) +":" + ("0" + now.getMinutes()).slice(-2) + ":" + ("0" + now.getSeconds()).slice(-2);
+							document.getElementById("date").innerHTML = str;
+						}
+						setInterval(doDate, 1000);
+						doDate();
+					</script>
+				</div>
+
+		<!-- Web search -->
+				<div id="web_search">
+					<form action="https://duckduckgo.com/" method="GET" autocomplete="off">
+						<label for="q">></label>
+						<input autofocus
+			        	 		id="q"
+			         			name="q"
+			         			type="search"
+			         			placeholder="search with duckduckgo...">
+					</form>
+				</div>
+
+		<!-- Links -->
+				<nav>
+					<div id=links_container>
+						<ul>
+							<a class="subtitle">Favorite</a>
+								<li><a href="https://hankleonard.com/">My Site</a></li>
+								<li><a href="https://github.com/">GitHub</a></li>
+								<li><a href="https://annas-archive.org/">Annas</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Finance</a>
+								<li><a href="https://coinmarketcap.com/">CoinMarketCap</a></li>
+								<li><a href="https://www.wellsfargo.com/">Wells Fargo</a></li>
+								<li><a href="https://investor.vanguard.com/my-account/log-on">Vanguard</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Media</a>
+								<li><a href="https://www.youtube.com/">YouTube</a></li>
+								<li><a href="https://www.reddit.com/">Reddit</a></li>
+								<li><a href="https://twitter.com/home">Twitter</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">TF2</a>
+								<li><a href="https://www.backpack.tf/">Backpack</a></li>
+								<li><a href="https://www.marketplace.tf/">Marketplace</a></li>
+								<li><a href="https://www.loadout.tf/">Loadout</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Boards</a>
+								<li><a href="https://boards.4channel.org/g/">/g/</a></li>
+								<li><a href="https://boards.4channel.org/lit/">/lit/</a></li>
+								<li><a href="https://boards.4channel.org/mu/">/mu/</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="bottom">
+			<p class="credits">
+				<a href="https://www.deviantart.com/nuralifsidoel/art/Futaba-Rio-Seishun-Buta-Yarou-Vector-778405449">Art by NurAlifSidoel on DeviantArt</a>
+			</p>
+
+			<div class="contacts">
+				<p>
+					<a href="https://gitlab.com/wolfiy/wlfys-minimal-startpage">GitLab Repo</a> | 
+					<span id="light-mode-toggle" class="light-mode-toggle">Switch themes</span>
+				</p>
+			</div>
+		</div>
+
+		<script src="scripts/darkmode.js"></script>
+	</body>
+</html>
